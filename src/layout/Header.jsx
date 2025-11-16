@@ -1,13 +1,19 @@
-import { NavLink } from "react-router";
+import { useContext } from "react";
+import { useTranslation } from "react-i18next";
+import { Link, NavLink } from "react-router";
+import { LangContext } from "../context/LangContext";
 
 export default function Header() {
+    const { t } = useTranslation();
+    const { lang, toggleLanguage } = useContext(LangContext);
     const navLinks = <>
-        <li> <NavLink to='/'>Home</NavLink> </li>
-        <li> <NavLink to='/test'>Test</NavLink> </li>
+        <li> <NavLink to='/' className='text-base'> {t('home')} </NavLink> </li>
+        <li> <NavLink to='/about' className='text-base'> {t('about')} </NavLink> </li>
+        <li> <NavLink to='/contact' className='text-base'> {t('contact')} </NavLink> </li>
     </>;
     return (
-        <header>
-            <nav className="navbar bg-base-100 shadow-sm">
+        <header className="bg-base-100 shadow-sm">
+            <nav className="navbar containerr">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -21,7 +27,7 @@ export default function Header() {
                             }
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">KhataPro</a>
+                    <a className="btn btn-ghost text-xl md:text-2xl"> {t('brand')} </a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -30,8 +36,12 @@ export default function Header() {
                         }
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <a className="btn">Button</a>
+                <div className="navbar-end gap-3">
+                    <select value={lang} onChange={(e) => toggleLanguage(e.target.value)} className="btn btn-outline px-2 py-1 rounded">
+                        <option value="en">English</option>
+                        <option value="bn">বাংলা</option>
+                    </select>
+                    <Link to='/auth/login' className="btn btn-primary"> {t('login')} </Link>
                 </div>
             </nav>
         </header>

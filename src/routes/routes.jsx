@@ -2,6 +2,11 @@ import { createBrowserRouter } from 'react-router';
 import Root from '../layout/Root';
 import Home from '../pages/Home';
 import Test from '../pages/Test';
+import { lazy } from 'react';
+const NoPage = lazy(() => import('../pages/NoPage'));
+const AuthLayout = lazy(() => import('../pages/AuthLayout'));
+const Login = lazy(() => import('../comps/auth/Login'));
+const Register = lazy(() => import('../comps/auth/Register'));
 
 export const router = createBrowserRouter([
     {
@@ -9,7 +14,17 @@ export const router = createBrowserRouter([
         element: <Root />,
         children: [
             { index: true, element: <Home /> },
-            { path: '/test', element: <Test /> }
+            {
+                path: 'auth',
+                element: <AuthLayout />,
+                children: [
+                    { index: true, element: <Login /> },
+                    { path: 'login', element: <Login /> },
+                    { path: 'register', element: <Register /> },
+                ]
+            },
+            { path: 'test', element: <Test /> },
+            { path: '*', element: <NoPage /> }
         ]
     }
 ]);

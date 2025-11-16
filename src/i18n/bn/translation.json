@@ -1,0 +1,21 @@
+{
+  "brand": "খাতা প্রো",
+  "dashboard": "ড্যাশবোর্ড",
+  "products": "পণ্য",
+  "sales": "বিক্রয়",
+  "stock": "স্টক",
+  "logout": "লগ আউট",
+  "welcome": "স্বাগতম",
+  "language": "ভাষা",
+  "home": "হোম",
+  "about": "সম্পর্কিত",
+  "contact": "যোগাযোগ",
+  "login": "লগইন",
+  "register": "রেজিস্টার",
+  "profile": "প্রোফাইল",
+  "settings": "সেটিংস",
+  "help": "সাহায্য",
+  "terms_conditions": "শর্তাবলী",
+  "privacy_policy": "গোপনীয়তা নীতি",
+  "logout_confirm": "আপনি কি নিশ্চিত যে আপনি লগ আউট করতে চান?"
+}

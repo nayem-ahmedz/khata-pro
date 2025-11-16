@@ -1,0 +1,21 @@
+{
+  "brand": "Khata Pro",
+  "dashboard": "Dashboard",
+  "products": "Products",
+  "sales": "Sales",
+  "stock": "Stock",
+  "logout": "Logout",
+  "welcome": "Welcome",
+  "language": "Language",
+  "home": "Home",
+  "about": "About",
+  "contact": "Contact",
+  "login": "Login",
+  "register": "Register",
+  "profile": "Profile",
+  "settings": "Settings",
+  "help": "Help",
+  "terms_conditions": "Terms & Conditions",
+  "privacy_policy": "Privacy Policy",
+  "logout_confirm": "Are you sure you want to logout?"
+}

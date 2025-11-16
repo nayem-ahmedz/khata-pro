@@ -14,9 +14,15 @@ This is a sales management and inventory tracking application for shops. It prov
 
 ## Technologies
 
-- React.js
+- HTML
 - Tailwind CSS + DaisyUI
+- JavaScript
+- React.js
+
+## Tools
 - React Router
+- Google fonts API : Inter
+- react-i18next i18next
 
 ## Timeline
 - Created on 15 Nov 2025

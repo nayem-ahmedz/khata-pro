@@ -1,0 +1,8 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+.containerr{
+    max-width: 1920px;
+    margin: auto;
+}
